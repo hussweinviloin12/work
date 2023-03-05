@@ -1,0 +1,104 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'open-sana',sans-serif;
+}
+:root{
+ --bg-color:conic-gradient(#a7aef9,#ddccf9,#cabbfa,#a7aef9);
+ --primary:#573b8a;
+ --ligth-gray:#f7f7f7;
+ --but-hover:#6d44b8;}
+ body{
+  background: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .contener{
+  width: 350px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+ }
+ #hidden{
+  display: none;
+ }
+ .signup{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+ }
+ label{
+  color:#fff;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+ }
+ input{
+  width: 70%;
+  height: 20px;
+  background: #8d91ba;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  border-radius: 5px;
+ }
+ button{
+  width: 50%;
+  height: 40px;
+  color: #fff;
+  background-color: var(--primary);
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+ }
+ button:hover{
+  background-color: var(--but-hover);
+ }
+ button:active{
+  transform: scale(0.97);
+ }
+ /*Login in page 2*/
+ .login{
+  height: 460px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 60%/10%;
+  transform: translateY(-60px);
+  transition: .8s ease-in-out;
+ }
+ .login label{
+  color: var(--primary);
+  transform: scale(0.4);
+ }
+ .login input{
+  background-color: var(--ligth-gray);
+ }
+ #hidden:checked ~.login{
+transform: translateY(-350px);
+ }
+ #hidden:checked ~.login label{
+  transform: scale(1);
+ }
+ #hidden:checked ~.signup label{
+  transform: scale(0.6);
+ }
